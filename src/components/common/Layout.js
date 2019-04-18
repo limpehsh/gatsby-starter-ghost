@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 import { Navigation } from '.'
 import config from '../../utils/siteConfig'
@@ -36,6 +36,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 {/* The main header section on top of the screen */}
                 <header className="site-head">
                     <div className="container">
+                        {/*}
                         <div className="site-mast">
                             <div className="site-mast-left">
                                 <Link to="/">
@@ -51,6 +52,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                             </div>
                         </div>
+                        */}
                         { isHome ?
                             <div className="site-banner">
                                 <h1 className="site-banner-title">{site.title}</h1>
@@ -63,7 +65,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <Navigation data={site.navigation} navClass="site-nav-item" />
                             </div>
                             <div className="site-nav-right">
-                                <Link className="site-nav-button" to="/about">About</Link>
+                                {/*<Link className="site-nav-button" to="/about">About</Link>*/}
+                                {/* three lines copied and pasted */}
+                                { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
+                                { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
+                                <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                             </div>
                         </nav>
                     </div>
@@ -81,10 +87,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <footer className="site-foot">
                     <div className="site-foot-nav container">
                         <div className="site-foot-nav-left">
-                            <Link to="/">{site.title}</Link> © 2019 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
+                            <Link to="/">{site.title}</Link> © 2019
                         </div>
                         <div className="site-foot-nav-right">
-                            <Navigation data={site.navigation} navClass="site-foot-nav-item" />
+                            <Link to="/">Latest Posts</Link>
+                            •
+                            <a href={ twitterUrl } target="_blank" rel="noopener noreferrer">Twitter</a>
+                            •
+                            <a href={ facebookUrl } target="_blank" rel="noopener noreferrer">Facebook</a>
+                            {/*<Navigation data={site.navigation} navClass="site-foot-nav-item" />*/}
                         </div>
                     </div>
                 </footer>
