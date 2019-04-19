@@ -89,14 +89,17 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <div className="site-foot-nav-left">
                             <Link to="/">{site.title}</Link> © 2019
                         </div>
+                        {/*
                         <div className="site-foot-nav-right">
                             <Link to="/">Latest Posts</Link>
+                            
                             •
                             <a href={ twitterUrl } target="_blank" rel="noopener noreferrer">Twitter</a>
                             •
                             <a href={ facebookUrl } target="_blank" rel="noopener noreferrer">Facebook</a>
-                            {/*<Navigation data={site.navigation} navClass="site-foot-nav-item" />*/}
+                            <Navigation data={site.navigation} navClass="site-foot-nav-item" />
                         </div>
+                        */}
                     </div>
                 </footer>
 
