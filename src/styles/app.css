@@ -662,7 +662,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-head {
-    padding-top: 20px;
+    padding-top: 0.1px;
     padding-bottom: 20px;
     color: #fff;
     background: var(--color-base);
@@ -987,7 +987,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-foot {
-    padding: 20px 0 40px 0;
+    padding: 15px 0 15px 0;
     color: rgba(255,255,255,0.7);
     font-size: 1.3rem;
     background: var(--color-base);
@@ -1015,4 +1015,11 @@ h6 {
 
 .site-foot-nav-right a:last-child {
     padding-right: 0;
+}
+
+.site-foot-nav-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
