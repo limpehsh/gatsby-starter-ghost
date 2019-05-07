@@ -20,8 +20,8 @@ import '../../styles/app.css'
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
-    const instagramUrl = `https://instagram.com/limpehsh`
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
+    // const instagramUrl = `https://instagram.com/obscurestrength`
+    // const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     // const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
 
     return (
@@ -66,10 +66,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <Navigation data={site.navigation} navClass="site-nav-item" />
                             </div>
                             <div className="site-nav-right">
-                                {<a href={ instagramUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/instagram.svg" alt="Instagram" /></a>}
+                                {/*<a href={ instagramUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/instagram.svg" alt="Instagram" /></a>*/}
                                 {/*<Link className="site-nav-button" to="/about">About</Link>*/}
                                 {/* three lines copied and pasted */}
-                                { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
+                                {/*site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>*/}
                                 {/*{ site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}*/}
                                 <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                             </div>
@@ -93,10 +93,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             <Link to="/">{site.title}</Link> © 2019
                             <br />
                             <Link to="/">Latest Posts</Link>
+                            {/*
                             &nbsp;•&nbsp;
                             <a href={ instagramUrl } target="_blank" rel="noopener noreferrer">Instagram</a>
                             &nbsp;•&nbsp;
                             <a href={ twitterUrl } target="_blank" rel="noopener noreferrer">Twitter</a>
+                            */}
                             {/*
                             &nbsp;•&nbsp;
                             <a href={ facebookUrl } target="_blank" rel="noopener noreferrer">Facebook</a>
